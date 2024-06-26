@@ -12,9 +12,7 @@ class User(AbstractUser):
     )
 
     phone = models.CharField(
-        max_length=35,
-        verbose_name="номер телефона",
-        help_text="Укажите ваш номер"
+        max_length=35, verbose_name="номер телефона", help_text="Укажите ваш номер"
     )
     city = models.CharField(
         max_length=35, **NULLABLE, verbose_name="город", help_text="Укажите ваш город"
