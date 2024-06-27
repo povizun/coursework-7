@@ -12,9 +12,7 @@ class User(AbstractUser):
     )
 
     phone = models.CharField(
-        max_length=35,
-        verbose_name="номер телефона",
-        help_text="Укажите ваш номер"
+        max_length=35, verbose_name="номер телефона", help_text="Укажите ваш номер"
     )
     city = models.CharField(
         max_length=35, **NULLABLE, verbose_name="город", help_text="Укажите ваш город"
@@ -24,6 +22,12 @@ class User(AbstractUser):
         **NULLABLE,
         verbose_name="аватар",
         help_text="Загрузите ваш аватар"
+    )
+    telegram_id = models.CharField(
+        max_length=50,
+        unique=True,
+        verbose_name="Chat-ID в телеграмм",
+        help_text="Укажите ваш chat-ID в телеграмм",
     )
 
     USERNAME_FIELD = "email"
