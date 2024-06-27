@@ -62,7 +62,7 @@ class Habit(models.Model):
     reward = models.CharField(
         max_length=150,
         verbose_name="Вознаграждение",
-        help_text="Укажите dознаграждение за выполнение привычки",
+        help_text="Укажите вознаграждение за выполнение привычки",
     )
     duration = models.DurationField(
         default=timedelta(minutes=2),
