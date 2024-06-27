@@ -23,6 +23,9 @@ celery = "^5.4.0"
 eventlet = "^0.36.1"
 redis = "^5.0.7"
 django-celery-beat = "^2.6.0"
+pillow = "^10.3.0"
+django-cors-headers = "^4.4.0"
+requests = "^2.32.3"
 
 
 [build-system]
