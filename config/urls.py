@@ -25,7 +25,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="Habbits API",
         default_version='v1',
-        description="API Documentation for habbits",
+        description="API Documentation for habits",
         terms_of_service="https://www.example.com/policies/terms/",
         contact=openapi.Contact(email="danilabelov.adm@yandex.ru"),
         license=openapi.License(name="BSD License"),
