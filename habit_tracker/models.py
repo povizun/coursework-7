@@ -25,7 +25,7 @@ class Habit(models.Model):
         verbose_name="создатель",
         help_text="Укажите создатель",
     )
-    destination = models.CharField(
+    place = models.CharField(
         max_length=100,
         verbose_name="Место выполнения",
         help_text="Укажите место выполнения привычки",
@@ -40,16 +40,16 @@ class Habit(models.Model):
         help_text="Укажите действие, которое представляет собой привычка",
     )
     period = models.IntegerField(
-        choices=HabitPeriod.choices,
+        choices=HabitPeriod.choices, default=HabitPeriod.EVERY_DAY,
         verbose_name="Периодичность привычки",
         help_text="Укажите периодичность привычки",
     )
     is_public = models.BooleanField(
-        verbose_name="Признак публичности",
+        verbose_name="Признак публичности", default=False,
         help_text="Укажите является ли данная привычка публичной",
     )
     is_pleasant = models.BooleanField(
-        verbose_name="Признак приятной привычки",
+        verbose_name="Признак приятной привычки", default=False,
         help_text="Укажите является ли данная привычка полезной",
     )
     related_habit = models.ForeignKey(
